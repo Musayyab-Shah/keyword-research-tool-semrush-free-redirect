@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Research by Semrush</title>
+    <style>
+        /* Container Styling */
+        .keyword-research-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Heading Styling */
+        .keyword-research-container h2 {
+            color: #333;
+            font-size: 26px; /* Increased size */
+            margin-bottom: 20px;
+        }
+
+        /* Search Form Styling */
+        .keyword-research-container form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Input Field Styling */
+        .keyword-research-container input[type="text"] {
+            width: 75%; /* Slightly increased size */
+            padding: 12px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 18px; /* Increased size */
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .keyword-research-container input[type="text"]:focus {
+            border-color: #0056b3;
+        }
+
+        /* Button Styling */
+        .keyword-research-container button {
+            padding: 12px 25px; /* Slightly increased padding */
+            margin-left: 10px;
+            border: none;
+            background-color: #ff7f00; /* Orange color */
+            color: #fff;
+            border-radius: 5px;
+            font-size: 18px; /* Increased size */
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .keyword-research-container button:hover {
+            background-color: #fff; /* Change background to white on hover */
+            color: #ff7f00; /* Change text color to orange on hover */
+        }
+
+        /* Powered by Semrush Styling */
+        .keyword-research-container p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .keyword-research-container p a {
+            color: #007bff;
+            text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .keyword-research-container p a:hover {
+            color: #ff7f00; /* Change color to orange on hover */
+            transform: scale(1.1); /* Zoom in on hover */
+        }
+
+        .keyword-research-container p a:active {
+            transform: scale(1.15); /* Slightly larger zoom on click */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .keyword-research-container input[type="text"] {
+                width: 65%;
+            }
+
+            .keyword-research-container button {
+                padding: 10px;
+                margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="keyword-research-container">
+        <h2>Keyword Research by Semrush</h2>
+        <form id="semrush-search-form">
+            <input type="text" id="keyword-input" placeholder="Enter your keyword">
+            <button type="submit">Search</button>
+        </form>
+        <p>Powered by <a href="https://www.semrush.com" target="_blank">Semrush</a></p>
+    </div>
+
+    <script>
+        document.getElementById('semrush-search-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            var keyword = document.getElementById('keyword-input').value;
+            var semrushUrl = 'https://www.semrush.com/analytics/keywordoverview/?q=' + encodeURIComponent(keyword);
+            window.open(semrushUrl, '_blank'); // Open the URL in a new tab
+        });
+    </script>
+</body>
+</html>
